@@ -11,3 +11,13 @@
     </h3>
   </section>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  created() {
+    // eslint-disable-next-line no-console
+    console.log('created')
+  },
+})
+</script>
