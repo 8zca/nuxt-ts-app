@@ -33,14 +33,16 @@
   </section>
 </template>
 
-<script>
-import Card from '~/components/Card'
+<script lang="ts">
+import { Vue, Component } from 'nuxt-property-decorator'
+import Card from '@/components/Card.vue'
 
-export default {
-  name: 'HomePage',
-
-  components: {
-    Card,
-  },
+@Component({
+  components: { Card },
+})
+export default class IndesPage extends Vue {
+  mounted() {
+    this.$myInjectedFunction('inject test')
+  }
 }
 </script>
