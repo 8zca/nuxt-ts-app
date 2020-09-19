@@ -13,11 +13,13 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
+import { Vue, Component } from 'nuxt-property-decorator'
+
+@Component
+export default class InspirePage extends Vue {
   created() {
     // eslint-disable-next-line no-console
     console.log('created')
-  },
-})
+  }
+}
 </script>
