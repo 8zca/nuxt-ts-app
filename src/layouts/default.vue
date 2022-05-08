@@ -1,10 +1,11 @@
 <template>
   <div>
     <div class="header">
-      <ul class="header__menu">
-        <li class="header__menu-item"><nuxt-link to="/">Home</nuxt-link></li>
-        <li class="header__menu-item"><nuxt-link to="/count">Count</nuxt-link></li>
-        <li class="header__menu-item"><nuxt-link to="/task">Task</nuxt-link></li>
+      <ul class="menu">
+        <li class="item"><nuxt-link to="/">Home</nuxt-link></li>
+        <li class="item"><nuxt-link to="/count">Count</nuxt-link></li>
+        <li class="item"><nuxt-link to="/task">Task</nuxt-link></li>
+        <li class="item"><nuxt-link to="/filter">Filter</nuxt-link></li>
       </ul>
     </div>
     <slot />
@@ -13,11 +14,11 @@
 
 <style lang="scss" scoped>
 .header {
-  &__menu {
+  .menu {
     display: flex;
     justify-content: flex-start;
   }
-  &__menu-item {
+  .item {
     padding: 8px 16px;
     list-style: none;
   }
