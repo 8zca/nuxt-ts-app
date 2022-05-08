@@ -1,9 +1,9 @@
 <template>
   <div class="todo">
     <ul class="list">
-      <li v-for="(item, index) in list" :key="index" class="item">
+      <li v-for="(item, index) in todo.list" :key="index" class="item">
         <div :class="{ 'done': item.done }">{{ item.body }}</div>
-        <div v-if="!item.done" @click="done(index)" class="complete">Complete</div>
+        <div v-if="!item.done" @click="todo.done(index)" class="complete">Complete</div>
       </li>
     </ul>
     <input type="text" v-model="task" class="text" />
@@ -12,20 +12,13 @@
 </template>
 
 <script setup lang="ts">
-type Task = {
-  body: string
-  done: boolean
-}
+import { useTodoState } from '@/stores/todo'
 
-const list = ref<Task[]>([])
+const todo = useTodoState()
 const task = ref<string>()
-
 const add = () => {
-  list.value.push({ body: task.value, done: false })
+  todo.add(task.value)
   task.value = ''
-}
-const done = (index: number) => {
-  list.value[index].done = true
 }
 </script>
 
