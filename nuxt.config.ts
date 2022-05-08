@@ -6,5 +6,6 @@ export default defineNuxtConfig({
   components: ['~/src/components'],
   alias: {
     "~": ".src/",
-  }
+  },
+  buildModules: ['@pinia/nuxt'],
 })

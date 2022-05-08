@@ -5,7 +5,6 @@
         <li class="item"><nuxt-link to="/">Home</nuxt-link></li>
         <li class="item"><nuxt-link to="/count">Count</nuxt-link></li>
         <li class="item"><nuxt-link to="/task">Task</nuxt-link></li>
-        <li class="item"><nuxt-link to="/filter">Filter</nuxt-link></li>
       </ul>
     </div>
     <slot />
