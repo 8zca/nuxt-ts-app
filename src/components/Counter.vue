@@ -1,8 +1,8 @@
 <template>
   <div class="counter">
-    <button class="counter__btn" @click="decrement">-1</button>
-    <div class="counter__output">{{ count }}</div>
-    <button class="counter__btn" @click="increment">+1</button>
+    <button class="btn" @click="decrement">-1</button>
+    <div class="output">{{ count }}</div>
+    <button class="btn" @click="increment">+1</button>
   </div>
 </template>
 
@@ -17,10 +17,10 @@ const decrement = () => count.value--
   width: 200px;
   display: flex;
   justify-content: space-between;
-  &__btn {
+  .btn {
     width: 60px;
   }
-  &__output {
+  .output {
     width: 60px;
     text-align: center;
   }

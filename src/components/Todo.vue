@@ -1,13 +1,13 @@
 <template>
   <div class="todo">
-    <ul class="todo__list">
-      <li v-for="(item, index) in list" :key="index" class="todo__item">
-        <div :class="{ 'todo__item--done': item.done }">{{ item.body }}</div>
-        <div v-if="!item.done" @click="done(index)" class="todo__complete">Complete</div>
+    <ul class="list">
+      <li v-for="(item, index) in list" :key="index" class="item">
+        <div :class="{ 'done': item.done }">{{ item.body }}</div>
+        <div v-if="!item.done" @click="done(index)" class="complete">Complete</div>
       </li>
     </ul>
-    <input type="text" v-model="task" class="todo__text" />
-    <button @click="add" class="todo__btn">ADD</button>
+    <input type="text" v-model="task" class="text" />
+    <button @click="add" class="btn">ADD</button>
   </div>
 </template>
 
@@ -31,23 +31,23 @@ const done = (index: number) => {
 
 <style lang="scss" scoped>
 .todo {
-  &__item {
+  .item {
     display: flex;
     width: 400px;
     justify-content: space-between;
 
-    &--done {
+    .done {
       text-decoration: line-through;
     }
   }
-  &__complete {
+  .complete {
     cursor: pointer;
     color: #999;
   }
-  &__text {
+  .text {
     padding: 4px;
   }
-  &__btn {
+  .btn {
     padding: 4px;
     width: 80px;
   }
