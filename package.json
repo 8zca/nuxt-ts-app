@@ -12,6 +12,7 @@
   "dependencies": {
     "@pinia/nuxt": "^0.1.9",
     "nuxt3": "latest",
-    "pinia": "^2.0.14"
+    "pinia": "^2.0.14",
+    "typescript": "^4.7.4"
   }
 }
